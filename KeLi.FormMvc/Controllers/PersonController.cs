@@ -10,13 +10,13 @@ namespace KeLi.FormMvc.Controllers
         public PersonController(PersonForm view)
         {
             View = view;
-            Model = new PersonModel("001", "Max");
+            Model = new Person("001", "Max");
             View.Controller = this;
         }
 
         public PersonForm View { get; set; }
 
-        public PersonModel Model { get; set; }
+        public Person Model { get; set; }
 
         public void UpdateItem()
         {

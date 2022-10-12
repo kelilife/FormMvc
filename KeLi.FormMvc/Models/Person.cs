@@ -5,13 +5,13 @@ using KeLi.FormMvc.Properties;
 
 namespace KeLi.FormMvc.Models
 {
-    public class PersonModel : INotifyPropertyChanged
+    public class Person : INotifyPropertyChanged
     {
-        private string _id;
+        private string id;
 
-        private string _name;
+        private string name;
 
-        public PersonModel(string id, string name)
+        public Person(string id, string name)
         {
             Id = id;
             Name = name;
@@ -19,25 +19,23 @@ namespace KeLi.FormMvc.Models
 
         public string Id
         {
-            get => _id;
+            get => id;
 
             set
             {
-                _id = value;
-
-                OnPropertyChanged(nameof(Id));
+                id = value;
+                OnPropertyChanged();
             }
         }
 
         public string Name
         {
-            get => _name;
+            get => name;
 
             set
             {
-                _name = value;
-
-                OnPropertyChanged(nameof(Name));
+                name = value;
+                OnPropertyChanged();
             }
         }
 
